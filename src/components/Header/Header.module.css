@@ -1,0 +1,31 @@
+.header{
+    background-color: rgba(4, 27, 57, 1);
+    padding: 45px;
+}
+.headerBlock{
+    background-image: url("../../assets/img/header.png");
+    height: 818px;
+}
+.imgContainer{
+    background-color: rgba(0,0,0,0.5);
+    height: inherit;
+    border-radius: 40px;
+}
+
+/*Navbar*/
+.navbar{
+    list-style-type: none;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.navbar div{
+    display: flex;
+    gap: 50px;
+}
+.navbar div li {
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
