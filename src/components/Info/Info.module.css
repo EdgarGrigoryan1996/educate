@@ -1,0 +1,138 @@
+.infoBlock{
+    display: flex;
+    justify-content: space-between;
+}
+.itemBlock{
+    background-color: white;
+    padding: 81px 0;
+    border-radius: 40px;
+    width: 45%;
+    text-align: center;
+    -webkit-box-shadow: 55px 89px 218px 1px rgba(255,255,255,0.43);
+    -moz-box-shadow: 55px 89px 218px 1px rgba(255,255,255,0.43);
+    box-shadow: 55px 89px 218px 1px rgba(255,255,255,0.43);
+}
+.numberLine{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 196px;
+    background: linear-gradient(180deg, #4FC8FF 0%, #2D95FF 49.5%, #2B4199 100%);
+    font-weight: 400; /* Жирный текст */
+    -webkit-background-clip: text; /* Поддержка для WebKit */
+    -webkit-text-fill-color: transparent; /* Прозрачный цвет текста */
+    background-clip: text; /* Поддержка для других браузеров */
+    color: transparent; /* Прозрачный текст */
+}
+.numberLine span{
+    display: flex;
+}
+.numberLine span img {
+    max-width: 100%;
+}
+
+.titleBlock span{
+    font-size: 44px;
+    font-weight: 700;
+    color:rgba(43, 68, 157, 1)
+}
+.titleBlock span.smallSize{
+    font-size: 36px;
+}
+
+@media screen  and (max-width: 1200px){
+    .numberLine{
+        font-size: 156px;
+    }
+
+    .titleBlock span{
+        font-size: 36px;
+    }
+    .titleBlock span.smallSize{
+        font-size: 30px;
+    }
+}
+
+@media screen  and (max-width: 956px){
+    .numberLine{
+        font-size: 120px;
+    }
+    .numberLine span:first-child {
+        width: 15%;
+    }
+    .titleBlock span{
+        font-size: 30px;
+    }
+    .titleBlock span.smallSize{
+        font-size: 22px;
+    }
+}
+
+@media screen  and (max-width: 756px){
+    .itemBlock{
+        border-radius: 20px;
+    }
+    .numberLine{
+        font-size: 96px;
+    }
+    .numberLine span:first-child {
+        width: 13%;
+    }
+    .titleBlock span{
+        font-size: 26px;
+    }
+    .titleBlock span.smallSize{
+        font-size: 18px;
+    }
+}
+
+@media screen  and (max-width: 650px){
+    .itemBlock{
+        padding: 50px 0;
+    }
+    .numberLine{
+        font-size: 80px;
+    }
+    .titleBlock span{
+        font-size: 22px;
+    }
+    .titleBlock span.smallSize{
+        font-size: 16px;
+    }
+}
+
+@media screen  and (max-width: 556px){
+    .itemBlock{
+        padding: 25px 0;
+        border-radius: 10px;
+    }
+    .numberLine{
+        font-size: 62px;
+    }
+    .numberLine span:first-child {
+        width: 10%;
+    }
+    .titleBlock span{
+        font-size: 18px;
+    }
+    .titleBlock span.smallSize{
+        font-size: 13px;
+    }
+}
+@media screen  and (max-width: 498px){
+    .itemBlock{
+        padding: 20px 0;
+        border-radius: 10px;
+    }
+    .numberLine{
+        font-size: 56px;
+    }
+
+    .titleBlock span{
+        font-size: 15px;
+    }
+    .titleBlock span.smallSize{
+        font-size: 12px;
+    }
+}
+

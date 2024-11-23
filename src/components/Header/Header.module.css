@@ -1,31 +1,213 @@
-.header{
-    background-color: rgba(4, 27, 57, 1);
-    padding: 45px;
-}
+
 .headerBlock{
-    background-image: url("../../assets/img/header.png");
-    height: 818px;
+    background-image: url("../../assets/img/educate.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    overflow: hidden;
+
 }
 .imgContainer{
-    background-color: rgba(0,0,0,0.5);
-    height: inherit;
-    border-radius: 40px;
+    background-color: rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding-bottom: 55%;
+    border-radius: 3.6%;
+    position: relative;
+}
+.headerDetailImg{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 /*Navbar*/
+.burger{
+    color: #FFFFFF;
+    font-weight: 900;
+    font-size: 24px;
+    display: none;
+}
 .navbar{
     list-style-type: none;
-    padding-top: 20px;
+    padding: 20px 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+.closeIcon{
+    display: none;
 }
 .navbar div{
     display: flex;
-    gap: 50px;
+    gap: 30px;
+}
+.contactLangBlock{
+    flex-basis: 38%;
+    justify-content: space-between;
 }
 .navbar div li {
     font-size: 24px;
     color: white;
     font-weight: 700;
     cursor: pointer;
+}
+
+.langBlock a{
+    margin-left: 10px;
+}
+.navbar div li a {
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+.navbar div li a.activeLang{
+    text-decoration: underline;
+}
+/*Logo*/
+.logo{
+    max-width: 152px;
+    width: 12%;
+    position: absolute;
+    top: 41%;
+    left: 47%;
+    transform: translate(-10%,-10%);
+}
+.logo img{
+    max-width: 100%;
+}
+
+@media screen  and (max-width: 1300px){
+
+    .navbar div li a{
+        font-size: 20px;
+    }
+}
+
+@media screen  and (max-width: 1200px){
+    .headerDetailImg{
+        width: 20%;
+    }
+    .navbar div li a{
+        font-size: 18px;
+    }
+    .logo{
+        width: 11%;
+    }
+}
+
+@media screen  and (max-width: 1050px){
+    .headerDetailImg{
+        width: 18%;
+    }
+    .navbar div li a{
+        font-size: 16px;
+    }
+}
+
+@media screen  and (max-width: 956px){
+    .navbar{
+        padding:10px 40px;
+    }
+    .navbar div{
+        gap: 25px;
+    }
+    .headerDetailImg{
+        width: 18%;
+    }
+    .navbar div li a{
+        font-size: 16px;
+    }
+}
+
+@media screen  and (max-width: 900px){
+    .navbar{
+        padding:10px 20px;
+    }
+    .navbar div{
+        gap: 15px;
+    }
+    .headerDetailImg{
+        width: 16%;
+    }
+    .navbar div li a{
+        font-size: 15px;
+    }
+}
+
+@media screen  and (max-width: 756px){
+    .headerBlock{
+        width: 100%;
+        height: 70vh;
+        background-size: cover;
+        background-position: center;
+        border-radius: 20px;
+    }
+    .imgContainer{
+        background-color: rgba(0,0,0,0.1);
+        height: 100%;
+        padding-bottom: 0;
+
+    }
+    .logo{
+        max-width: 350px;
+        width: 135px;
+        position: absolute;
+        top: 41%;
+        left: 46%;
+        transform: translate(-20%,-12%);
+    }
+    .burger{
+        display: block;
+        padding: 10px 20px;
+        font-size: 36px;
+    }
+    .navbar{
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 300px;
+        height: 600px;
+        background-color: var(--mainColor);
+        padding:25px;
+        flex-direction: column;
+        justify-content: flex-start;
+        z-index: 9999;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .activeMobileMenu{
+        left: 0;
+    }
+    .closeIcon{
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        color: #000;
+        font-weight: 900;
+        font-size: 28px;
+    }
+    .navbar div{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .contactLangBlock{
+        margin-top: 13px;
+        flex-basis: 100%;
+        justify-content: space-between;
+    }
+    .headerDetailImg{
+        width: 25%;
+    }
+    .navbar div li a{
+        font-size: 18px;
+    }
+}
+
+
+
+@media screen  and (max-width: 498px){
+    .navbar div{
+        gap: 15px;
+    }
 }

@@ -1,6 +1,15 @@
 .pageWrapper{
+    position: relative;
     max-width: 1440px;
+    padding: 44px 44px 0 44px;
     margin: 0 auto;
+    background-color: var(--pageBackColor);
+}
+
+@media screen and (max-width: 956px){
+    .pageWrapper{
+        padding: 20px 20px 0 20px;
+    }
 }
 
 

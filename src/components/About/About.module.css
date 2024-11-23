@@ -1,0 +1,98 @@
+.about{
+    padding: 44px;
+}
+.about h2{
+    text-align: center;
+    font-size: 96px;
+    background: linear-gradient(180deg, #4FC8FF 0%, #2D95FF 49.5%, #2B4199 100%);
+    -webkit-background-clip: text; /* Поддержка для WebKit */
+    -webkit-text-fill-color: transparent; /* Прозрачный цвет текста */
+    background-clip: text; /* Поддержка для других браузеров */
+    color: transparent; /* Прозрачный текст */
+}
+.aboutContent{
+    display: flex;
+    margin-top: 45px;
+    align-items: center;
+    gap: 50px;
+}
+.aboutContent div:first-child{
+    flex-basis: 55%;
+}
+.aboutContent div:last-child{
+    flex-basis: 44%;
+}
+.aboutImage img {
+    width: 100%;
+}
+.aboutInfo{
+    border: 1px solid var(--mainColor);
+    border-radius: 40px;
+    max-width: 660px;
+}
+.aboutInfo p{
+    font-size: 32px;
+    color: var(--mainColor);
+    padding: 36px;
+}
+
+@media screen  and (max-width: 1110px){
+    .about h2{
+        font-size: 76px;
+    }
+    .aboutInfo{
+        border-radius: 20px;
+    }
+
+    .aboutInfo p{
+        font-size: 24px;
+        padding: 20px 15px;
+    }
+}
+
+@media screen  and (max-width: 956px){
+    .about h2{
+        font-size: 56px;
+    }
+
+    .aboutInfo p{
+        font-size: 18px;
+        padding: 20px;
+    }
+}
+@media screen  and (max-width: 756px){
+    .about{
+        padding: 30px;
+    }
+    .about h2{
+        font-size: 48px;
+    }
+    .aboutContent{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .aboutImage{
+        text-align: center;
+        width: 100%;
+    }
+    .aboutImage img{
+        width: 100%;
+    }
+    .aboutInfo{
+        border-radius: 20px;
+    }
+    .aboutInfo p{
+        font-size: 22px;
+        line-height: 25px;
+        padding: 15px;
+        letter-spacing: 1px;
+    }
+}
+
+@media screen  and (max-width: 556px){
+    .about h2{
+        font-size: 36px;
+    }
+
+
+}

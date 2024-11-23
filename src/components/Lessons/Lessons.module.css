@@ -1,0 +1,144 @@
+.lessonsBlock{
+    position: relative;
+    padding: 90px 0;
+    overflow: hidden ;
+    cursor: grab;
+}
+.lessonsBlock h2{
+    text-align: center;
+    font-size: 96px;
+    font-weight: 700;
+    background: linear-gradient(180deg, #4FC8FF 0%, #2D95FF 49.5%, #2B4199 100%);
+    -webkit-background-clip: text; /* Поддержка для WebKit */
+    -webkit-text-fill-color: transparent; /* Прозрачный цвет текста */
+    background-clip: text; /* Поддержка для других браузеров */
+    color: transparent; /* Прозрачный текст */
+}
+.lessonsBlock ul{
+    list-style-type: -moz-ethiopic-numeric;
+    margin: 26px 0 0 30px;
+}
+.lessonsBlock ul li{
+    font-size: 32px;
+}
+.slideBlock{
+    margin-top: 45px;
+    display: flex;
+    width: 220%;
+    justify-content: flex-start;
+    gap: 130px;
+
+}
+.slideCard{
+    padding: 1px; /* Толщина рамки */
+    border-image-source: linear-gradient(0deg, #000000, #000000);
+    background:  linear-gradient(180deg, #0275A4 0%, #9DE9FF 100%);
+    border-radius: 10px; /* Радиус углов рамки */
+    width: 19%;
+}
+.slideContent{
+    background-color: white; /* Цвет фона внутреннего блока */
+    border-radius: 8px; /* Радиус углов, меньше чем у рамки */
+    padding: 20px;
+    height: 100%;
+}
+.slideTitle{
+    font-size: 36px;
+    text-align: center;
+    font-weight: 700;
+    background: linear-gradient(180deg, #4FC8FF 0%, #2D95FF 49.5%, #2B4199 100%);
+    -webkit-background-clip: text; /* Поддержка для WebKit */
+    -webkit-text-fill-color: transparent; /* Прозрачный цвет текста */
+    background-clip: text; /* Поддержка для других браузеров */
+    color: transparent; /* Прозрачный текст */
+}
+
+@media screen  and (max-width: 1440px){
+    .slideBlock{
+        padding: 0 50px;
+    }
+}
+
+@media screen  and (max-width: 1300px){
+    .slideTitle{
+        font-size: 28px;
+    }
+    .lessonsBlock ul li{
+        font-size: 24px;
+    }
+}
+
+@media screen  and (max-width: 1110px){
+    .lessonsBlock h2{
+        font-size: 76px;
+    }
+
+    .slideTitle{
+        font-size: 26px;
+    }
+    .lessonsBlock ul li{
+        font-size: 22px;
+    }
+    .slideBlock{
+        gap: 50px;
+    }
+    .slideCard{
+        width: 25%;
+    }
+}
+
+@media screen  and (max-width: 956px){
+    .lessonsBlock h2{
+        font-size: 56px;
+    }
+}
+
+@media screen  and (max-width: 756px){
+    .lessonsBlock{
+        padding: 30px 0;
+    }
+    .slideBlock{
+        padding: 0 25px;
+    }
+    .lessonsBlock h2{
+        font-size: 48px;
+    }
+    .slideContent{
+        padding:20px 5px;
+    }
+    .slideTitle{
+        font-size: 18px;
+    }
+    .lessonsBlock ul li{
+        font-size: 14px;
+    }
+    .slideBlock{
+        gap: 30px;
+    }
+    .slideCard{
+        width: 40%;
+    }
+}
+
+@media screen  and (max-width: 556px){
+    .lessonsBlock h2{
+        font-size: 36px;
+    }
+    .slideContent{
+        padding:10px 5px 5px 5px;
+    }
+    .slideTitle{
+        font-size: 14px;
+    }
+    .lessonsBlock ul li{
+        font-size: 10px;
+    }
+    .slideBlock{
+        gap: 15px;
+    }
+    .slideCard{
+        width: 40%;
+    }
+}
+
+

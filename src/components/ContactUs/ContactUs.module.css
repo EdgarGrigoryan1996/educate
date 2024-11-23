@@ -1,0 +1,120 @@
+.howHelpYouBlock{
+    padding: 110px 80px 60px 100px;
+    color: var(--mainColor);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    z-index: 999;
+}
+.howHelpYouBlock h2{
+    font-size: 86px;
+    font-weight: 700;
+    background: linear-gradient(180deg, #4FC8FF 0%, #2D95FF 49.5%, #2B4199 100%);
+    -webkit-background-clip: text; /* Поддержка для WebKit */
+    -webkit-text-fill-color: transparent; /* Прозрачный цвет текста */
+    background-clip: text; /* Поддержка для других браузеров */
+    color: transparent; /* Прозрачный текст */
+    text-transform: uppercase;
+}
+.howHelpYouBlock h3{
+    font-size: 48px;
+    font-weight: 400;
+    color: rgba(92, 171, 226, 1);
+}
+
+.howHelpYouBlock > div{
+    flex-direction: column;
+    gap: 25px !important;
+}
+.howHelpYouBlock div{
+    font-size: 40px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: rgba(92, 171, 226, 1);
+}
+
+@media screen  and (max-width: 1100px){
+    .howHelpYouBlock h2{
+        font-size: 70px;
+    }
+    .howHelpYouBlock h3{
+        font-size: 36px;
+    }
+    .howHelpYouBlock div{
+        font-size: 30px;
+    }
+    .howHelpYouBlock div img{
+        width: 50px;
+    }
+}
+
+@media screen  and (max-width: 956px){
+    .howHelpYouBlock h2{
+        font-size: 60px;
+    }
+    .howHelpYouBlock h3{
+        font-size: 28px;
+    }
+    .howHelpYouBlock div{
+        font-size: 22px;
+    }
+}
+
+@media screen  and (max-width: 756px){
+    .howHelpYouBlock{
+        padding: 30px;
+        gap: 50px;
+    }
+    .howHelpYouBlock h2{
+        font-size: 52px;
+    }
+    .howHelpYouBlock h3{
+        font-size: 24px;
+    }
+    .howHelpYouBlock div{
+        font-size: 20px;
+    }
+}
+
+@media screen  and (max-width: 556px){
+    .howHelpYouBlock h2{
+        font-size: 40px;
+    }
+    .howHelpYouBlock h3{
+        font-size: 22px;
+    }
+    .howHelpYouBlock{
+        gap: 60px;
+    }
+    .howHelpYouBlock >div {
+        flex-direction: row;
+        justify-content: space-between !important;
+    }
+    .howHelpYouBlock > div > div{
+        font-size: 14px;
+        gap: 5px !important;
+
+    }
+    .howHelpYouBlock div img{
+        width: 30px;
+    }
+}
+
+@media screen  and (max-width: 456px){
+    .howHelpYouBlock{
+        padding: 20px;
+    }
+    .howHelpYouBlock h2{
+        font-size: 32px;
+    }
+    .howHelpYouBlock h3{
+        font-size: 18px;
+    }
+    .howHelpYouBlock > div > div{
+        font-size: 12px;
+    }
+}
