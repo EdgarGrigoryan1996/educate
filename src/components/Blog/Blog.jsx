@@ -23,7 +23,7 @@ const Blog = () => {
   const [slidesPerView, setSlidesPerView] = useState(null);
   useEffect(() => {
     axios
-      .get("https://strapi-educate.onrender.com/api/blogs?populate=*") // Получение данных
+      .get("http://localhost:1337/api/blogs?populate=*") // Получение данных
       .then((response) => {
         setBlogs(response.data.data); // Устанавливаем данные в state
         setSlidesPerView(
@@ -83,7 +83,7 @@ const Blog = () => {
                   <div className={s.slideCard}>
                     <div className={s.cardImage}>
                       <img
-                        src={`https://strapi-educate.onrender.com${blog.image.url}`}
+                        src={`http://localhost:1337${blog.image.url}`}
                         alt="Բլոգ"
                         onError={(e) => {
                           e.target.onerror = null; // предотвратить бесконечный цикл ошибок

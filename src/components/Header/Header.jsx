@@ -2,22 +2,28 @@ import s from "./Header.module.css";
 import logo from "../../assets/img/logo.png";
 import headerDetailImg from "../../assets/img/headerDetail.png";
 import { useTranslation } from "react-i18next";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 export const Header = () => {
   const { t, i18n } = useTranslation();
+  const navbarRef = useRef(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    if (localStorage.getItem("lang")) {
-      console.log(localStorage.getItem("lang"));
-      i18n.changeLanguage(localStorage.getItem("lang"));
+  const handleClickOutside = (event) => {
+    if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+      setMobileMenuOpen(false);
     }
-  }, []);
-
+  };
   const closeMenu = (setMobileMenuOpen) => {
     setMobileMenuOpen(false);
   };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className={s.header}>
@@ -37,6 +43,7 @@ export const Header = () => {
             <RxHamburgerMenu />
           </div>
           <ul
+            ref={navbarRef}
             className={
               mobileMenuOpen ? s.navbar + " " + s.activeMobileMenu : s.navbar
             }
@@ -77,8 +84,9 @@ export const Header = () => {
                   className={
                     localStorage.getItem("lang") === "en" ? s.activeLang : ""
                   }
-                  href="#"
-                  onClick={() => {
+                  href=""
+                  onClick={(e) => {
+                    e.preventDefault();
                     i18n.changeLanguage("en");
                     localStorage.setItem("lang", "en");
                   }}
@@ -92,8 +100,9 @@ export const Header = () => {
                       ? s.activeLang
                       : ""
                   }
-                  href="#"
-                  onClick={() => {
+                  href=""
+                  onClick={(e) => {
+                    e.preventDefault();
                     i18n.changeLanguage("am");
                     localStorage.setItem("lang", "am");
                   }}

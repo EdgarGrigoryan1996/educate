@@ -95,7 +95,7 @@
 
 @media screen  and (max-width: 756px){
     .lessonsBlock{
-        padding: 30px 0;
+        padding: 25px 0;
     }
     .slideBlock{
         padding: 0 25px;
@@ -109,8 +109,12 @@
     .slideTitle{
         font-size: 18px;
     }
+    .lessonsBlock ul{
+        margin: 20px 0 0 17px;
+    }
     .lessonsBlock ul li{
-        font-size: 14px;
+        font-size: 12px;
+        margin-top: 5px;
     }
     .slideBlock{
         gap: 30px;
@@ -131,13 +135,20 @@
         font-size: 14px;
     }
     .lessonsBlock ul li{
-        font-size: 10px;
+        font-size: 11px;
+        margin-top: 3px;
     }
     .slideBlock{
         gap: 15px;
     }
     .slideCard{
         width: 40%;
+    }
+}
+
+@media screen  and (max-width: 456px){
+    .lessonsBlock ul{
+        margin: 15px 0 0 12px;
     }
 }
 

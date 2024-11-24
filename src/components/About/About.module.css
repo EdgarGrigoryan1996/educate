@@ -62,14 +62,14 @@
 }
 @media screen  and (max-width: 756px){
     .about{
-        padding: 30px;
+        padding: 25px;
     }
     .about h2{
         font-size: 48px;
     }
     .aboutContent{
         flex-direction: column;
-        gap: 20px;
+        gap: 45px;
     }
     .aboutImage{
         text-align: center;
@@ -93,6 +93,18 @@
     .about h2{
         font-size: 36px;
     }
+    .aboutContent{
+        margin-top: 30px;
+        gap: 30px;
+    }
+    .aboutInfo p {
+        font-size: 18px;
+    }
+}
 
-
+@media screen and (max-width: 498px){
+    .aboutInfo p {
+        font-size: 15px;
+        line-height: 20px;
+    }
 }

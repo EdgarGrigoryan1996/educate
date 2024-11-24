@@ -2,7 +2,7 @@ import s from "./Footer.module.css";
 import logo from "../../assets/img/footerLogo.png";
 import facebookLogo from "../../assets/img/facebook.png";
 import xLogo from "../../assets/img/x.png";
-import linkedinLogo from "../../assets/img/Link.png";
+import instagramLogo from "../../assets/img/instagram.png";
 
 export const Footer = () => {
   return (
@@ -20,10 +20,20 @@ export const Footer = () => {
             <div className={s.social}>
               <div>
                 <span>
-                  <img src={facebookLogo} alt="Facebook" />
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61567820971633"
+                    target="_blank"
+                  >
+                    <img src={facebookLogo} alt="Facebook" />
+                  </a>
                 </span>
                 <span>
-                  <img src={xLogo} alt="X" />
+                  <a
+                    href="https://www.instagram.com/iiiii_educate?igsh=eGFjeWExNWlnNWox"
+                    target="_blank"
+                  >
+                    <img src={instagramLogo} alt="X" />
+                  </a>
                 </span>
               </div>
             </div>
