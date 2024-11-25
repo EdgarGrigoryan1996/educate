@@ -12,4 +12,10 @@
     }
 }
 
+@media screen and (max-width: 556px){
+    .pageWrapper{
+        padding: 5px 5px 0 5px;
+    }
+}
+
 

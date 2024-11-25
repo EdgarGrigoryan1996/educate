@@ -40,7 +40,9 @@
 
 .cardImage{
     height: 70%;
-
+}
+.slideCard:not(:has(.cardTitle)) .cardImage{
+    height: 100%;
 }
 .cardImage img{
     max-width: 100%;
@@ -107,7 +109,7 @@
         font-size: 36px;
     }
     .slideCard {
-
+        height: 90%;
     }
     .cardTitle p {
         font-size: 10px;

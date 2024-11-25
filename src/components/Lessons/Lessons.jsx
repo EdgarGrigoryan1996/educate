@@ -1,95 +1,73 @@
 import s from "./Lessons.module.css";
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import WhiteWrapper from "../WhiteWrapper/WhiteWrapper.jsx";
+import { Swiper, SwiperSlide } from "swiper/react";
+import {
+  A11y,
+  Autoplay,
+  Navigation,
+  Pagination,
+  Scrollbar,
+} from "swiper/modules";
 
 export const Lessons = () => {
   const { t } = useTranslation();
   const translationExists = (key) => t(key) !== key;
-  const [startPosition, setStartPosition] = useState(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [offset, setOffset] = useState(0); // Текущее смещение
-  const [lastOffset, setLastOffset] = useState(0); // Последнее смещение
-
-  const totalSlides = 5; // Общее количество слайдов
-  const visibleSlides = 2; // Количество видимых слайдов
-  const slideWidth = 70 / visibleSlides; // Ширина одного слайда в процентах
-
-  // Вычисление пределов
-  const maxOffset = 10; // Начало слайдов
-  const minOffset = -(
-    (totalSlides - visibleSlides) *
-    (slideWidth / 100) *
-    window.innerWidth
-  );
-
-  // Начало перетаскивания
-  const handleStart = (position) => {
-    setStartPosition(position);
-    setIsDragging(true);
-  };
-
-  // Перемещение мыши или пальца
-  const handleMove = (position) => {
-    if (!isDragging || startPosition === null) return;
-
-    const diff = position - startPosition;
-    const newOffset = lastOffset + diff;
-
-    // Ограничиваем смещение
-    if (newOffset <= maxOffset && newOffset >= minOffset) {
-      setOffset(newOffset);
-    }
-  };
-
-  // Завершение перетаскивания
-  const handleEnd = () => {
-    setLastOffset(offset); // Фиксируем положение, где пользователь отпустил мышь/палец
-    setIsDragging(false);
-    setStartPosition(null);
-  };
 
   return (
     <WhiteWrapper>
-      <div
-        id="lessons"
-        className={s.lessonsBlock}
-        onMouseDown={(e) => handleStart(e.clientX)}
-        onMouseMove={(e) => handleMove(e.clientX)}
-        onMouseUp={handleEnd}
-        onMouseLeave={handleEnd}
-        onTouchStart={(e) => handleStart(e.touches[0].clientX)}
-        onTouchMove={(e) => handleMove(e.touches[0].clientX)}
-        onTouchEnd={handleEnd}
-      >
+      <div id="lessons" className={s.lessonsBlock}>
         <h2>{t("lessons.title")}</h2>
-        <div
-          className={s.slideBlock}
-          style={{
-            transform: `translateX(${offset}px)`,
-            transition: isDragging ? "none" : "transform 0.3s ease", // Анимация только при завершении
-          }}
-        >
-          {[...Array(totalSlides)].map((_, i) => (
-            <div key={i} className={s.slideCard}>
-              <div className={s.slideContent}>
-                <div className={s.slideTitle}>
-                  {t(`lessons.card${i + 1}.title`)}
+        <div className={s.slideBlock}>
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: true,
+              pauseOnMouseEnter: true,
+            }}
+            spaceBetween={30}
+            slidesPerView={2.5}
+            breakpoints={{
+              556: {
+                spaceBetween: 30,
+                slidesPerView: 2.5,
+              },
+              256: {
+                spaceBetween: 10,
+                slidesPerView: 2.2,
+              },
+            }}
+            navigation={{
+              prevEl: ".custom-prev",
+              nextEl: ".custom-next",
+            }}
+          >
+            {[...Array(5)].map((_, i) => (
+              <SwiperSlide>
+                <div key={i} className={s.slideCard}>
+                  <div className={s.slideContent}>
+                    <div className={s.slideTitle}>
+                      {t(`lessons.card${i + 1}.title`)}
+                    </div>
+                    <ul>
+                      {Array(4)
+                        .fill(0)
+                        .map((_, j) =>
+                          translationExists(
+                            `lessons.card${i + 1}.line${j + 1}`,
+                          ) ? (
+                            <li key={j}>
+                              {t(`lessons.card${i + 1}.line${j + 1}`)}
+                            </li>
+                          ) : null,
+                        )}
+                    </ul>
+                  </div>
                 </div>
-                <ul>
-                  {Array(4)
-                    .fill(0)
-                    .map((_, j) =>
-                      translationExists(`lessons.card${i + 1}.line${j + 1}`) ? (
-                        <li key={j}>
-                          {t(`lessons.card${i + 1}.line${j + 1}`)}
-                        </li>
-                      ) : null,
-                    )}
-                </ul>
-              </div>
-            </div>
-          ))}
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </WhiteWrapper>

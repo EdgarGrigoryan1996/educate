@@ -91,9 +91,11 @@ const Blog = () => {
                         }}
                       />
                     </div>
-                    <div className={s.cardTitle}>
-                      <p>{blog.Description}</p>
-                    </div>
+                    {blog.Description && (
+                      <div className={s.cardTitle}>
+                        <p>{blog.Description}</p>
+                      </div>
+                    )}
                   </div>
                 </SwiperSlide>
               ))}

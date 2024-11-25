@@ -19,22 +19,19 @@
     margin: 26px 0 0 30px;
 }
 .lessonsBlock ul li{
-    font-size: 32px;
+    font-size: 28px;
 }
 .slideBlock{
     margin-top: 45px;
     display: flex;
-    width: 220%;
-    justify-content: flex-start;
-    gap: 130px;
-
+    padding: 0 25px;
 }
 .slideCard{
     padding: 1px; /* Толщина рамки */
     border-image-source: linear-gradient(0deg, #000000, #000000);
     background:  linear-gradient(180deg, #0275A4 0%, #9DE9FF 100%);
     border-radius: 10px; /* Радиус углов рамки */
-    width: 19%;
+    height: 100%;
 }
 .slideContent{
     background-color: white; /* Цвет фона внутреннего блока */
@@ -77,14 +74,12 @@
         font-size: 26px;
     }
     .lessonsBlock ul li{
-        font-size: 22px;
+        font-size: 18px;
     }
-    .slideBlock{
-        gap: 50px;
+    .lessonsBlock ul{
+        margin: 20px 0 0 17px;
     }
-    .slideCard{
-        width: 25%;
-    }
+
 }
 
 @media screen  and (max-width: 956px){
@@ -109,22 +104,18 @@
     .slideTitle{
         font-size: 18px;
     }
-    .lessonsBlock ul{
-        margin: 20px 0 0 17px;
-    }
+
     .lessonsBlock ul li{
-        font-size: 12px;
+        font-size: 15px;
         margin-top: 5px;
-    }
-    .slideBlock{
-        gap: 30px;
-    }
-    .slideCard{
-        width: 40%;
     }
 }
 
 @media screen  and (max-width: 556px){
+    .slideBlock{
+
+        padding: 0 10px;
+    }
     .lessonsBlock h2{
         font-size: 36px;
     }
@@ -137,12 +128,6 @@
     .lessonsBlock ul li{
         font-size: 11px;
         margin-top: 3px;
-    }
-    .slideBlock{
-        gap: 15px;
-    }
-    .slideCard{
-        width: 40%;
     }
 }
 

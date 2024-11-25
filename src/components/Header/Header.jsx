@@ -34,13 +34,14 @@ export const Header = () => {
             src={headerDetailImg}
             alt="Educate"
           />
-          <div
-            className={s.burger}
-            onClick={() => {
-              setMobileMenuOpen(true);
-            }}
-          >
-            <RxHamburgerMenu />
+          <div className={s.burger}>
+            <span
+              onClick={() => {
+                setMobileMenuOpen(true);
+              }}
+            >
+              <RxHamburgerMenu />
+            </span>
           </div>
           <ul
             ref={navbarRef}
