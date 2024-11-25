@@ -111,6 +111,9 @@
     .slideCard {
         height: 90%;
     }
+    .cardTitle{
+        padding: 10px;
+    }
     .cardTitle p {
         font-size: 10px;
     }
